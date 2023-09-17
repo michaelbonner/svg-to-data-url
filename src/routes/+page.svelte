@@ -12,7 +12,12 @@
 
 <h1 class="text-3xl">SVG to data url</h1>
 
-<textarea class="w-full h-64 border py-2 px-4" bind:value={svg} on:input={handleInput} />
+<textarea
+	placeholder="<svg>...</svg>"
+	class="w-full h-64 border py-2 px-4"
+	bind:value={svg}
+	on:input={handleInput}
+/>
 
 {#if svg}
 	<div class="grid gap-4">
