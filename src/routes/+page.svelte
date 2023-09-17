@@ -12,21 +12,29 @@
 
 <h1 class="text-3xl">SVG to data url</h1>
 
-<textarea class="w-full h-64 border" bind:value={svg} on:input={handleInput} />
+<textarea class="w-full h-64 border py-2 px-4" bind:value={svg} on:input={handleInput} />
 
 {#if svg}
-	<div class="bg-gray-50 p-4 inline-flex my-2">
-		<div class="svg-display" style="background-image: {svgBackground}" />
-	</div>
+	<div class="grid gap-4">
+		<div class="inline-flex justify-start">
+			<div class="bg-gray-50 p-4">
+				<div class="svg-display" style="background-image: {svgBackground}" />
+			</div>
+		</div>
 
-	<div class="my-2">
-		<h2>Encoded SVG</h2>
-		<pre>{encodedSvg}</pre>
-	</div>
+		<div>
+			<h2 class="font-bold">Encoded SVG</h2>
+			<div class="max-w-full overflow-x-scroll py-2 px-4 bg-gray-50">
+				<code class="break-all">{encodedSvg}</code>
+			</div>
+		</div>
 
-	<div class="my-2">
-		<h2>SVG Background</h2>
-		<pre>{svgBackground}</pre>
+		<div>
+			<h2 class="font-bold">SVG Background</h2>
+			<div class="max-w-full overflow-x-scroll py-2 px-4 bg-gray-50">
+				<code class="break-all">{svgBackground}</code>
+			</div>
+		</div>
 	</div>
 {/if}
 
