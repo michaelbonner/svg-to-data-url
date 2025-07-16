@@ -17,13 +17,13 @@
 	class="w-full h-64 border py-2 px-4"
 	bind:value={svg}
 	on:input={handleInput}
-/>
+></textarea>
 
 {#if svg}
 	<div class="grid gap-4">
 		<div class="inline-flex justify-start">
 			<div class="bg-gray-50 p-4">
-				<div class="svg-display" style="background-image: {svgBackground}" />
+				<div class="svg-display" style="background-image: {svgBackground}"></div>
 			</div>
 		</div>
 
